@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load static %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/detail.css' %}">
+{% endblock %}
+{% block content %}
+<a href="/" class="back-button">Back to Home</a>
+<div class="theory-detail">
+    <div class="image-container">
+        <img src="{{ theory.image.url }}" alt="{{ theory.name }}">
+    </div>
+    <div class="description">
+        <h2>Description</h2>
+        <p>{{ theory.description }}</p>
+    </div>
+</div>
+{% endblock %}

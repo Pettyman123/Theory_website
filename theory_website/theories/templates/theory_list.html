@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Theories</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header>
+        <h1>World Theories</h1>
+    </header>
+    <main>
+        <div class="card-container">
+            {% for theory in theories %}
+            <div class="theory-card">
+                <img src="{{ theory.image.url }}" alt="{{ theory.name }}">
+                <div class="card-content">
+                    <h3>{{ theory.name }}</h3>
+                    <p>{{ theory.description|truncatewords:15 }}</p>
+                    <a href="{{ theory.id }}/" class="btn">Read More</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 World Theories</p>
+    </footer>
+</body>
+</html>

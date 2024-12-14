@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Theory Details</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header>
+    <a href="index.html">← Back to Theories</a>
+    <h1 id="theory-title">Theory Title</h1>
+  </header>
+  <main>
+    <img id="theory-image" src="#" alt="Theory Image">
+    <p id="theory-description"></p>
+    <p><strong>Year:</strong> <span id="theory-year"></span></p>
+  </main>
+  <footer>
+    <p>© 2024 World Theories</p>
+  </footer>
+  <script src="assets/js/data.js"></script>
+  <script>
+    // Get theory details from URL params
+    const urlParams = new URLSearchParams(window.location.search);
+    const theoryId = urlParams.get('id');
+    const theory = theories.find(t => t.id === parseInt(theoryId));
+
+    // Populate the page
+    if (theory) {
+      document.getElementById("theory-title").innerText = theory.name;
+      document.getElementById("theory-image").src = theory.image;
+      document.getElementById("theory-description").innerText = theory.description;
+      document.getElementById("theory-year").innerText = theory.year;
+    }
+  </script>
+</body>
+</html>

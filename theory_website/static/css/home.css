@@ -1,0 +1,52 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color:  #C5C098;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #F1EFE2;
+    padding: 20px;
+    text-align: center;
+}
+
+.theory-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card h2 {
+    padding: 15px;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.card a {
+    text-decoration: none;
+    color: inherit;
+}
