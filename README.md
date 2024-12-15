@@ -16,8 +16,8 @@
 <h3>Installation Steps:</h3>
 <li>Clonse repository using bash terminal</li>
 <ul>
-<li>git clone https://github.com/yourusername/airline-reservation-system.git</li>
-<li>cd airline-reservation-system</li>
+<li>git clone https://github.com/Pettyman123/theory_website.git</li>
+<li>cd Theory_wesbite</li>
 </ul>
 <li>Create a virtual enviornment</li>
 <ul>python -m venv venv
